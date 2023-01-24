@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@uiw/react-shields": "^1.1.3",
+    "init": "^0.1.2",
+    "inquirer": "^8.2.4",
+    "npm": "^9.3.1"
+  }
+}
