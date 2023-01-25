@@ -1,14 +1,23 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
-
 inquirer
   .prompt([
     {
       type: "list",
-      message: "Select a lisence for this project",
-      choices:["Apache 2.0","GPL 3.0" ],
-      name: "lisence",
+      message: "Select a license for this project",
+      choices: ["MIT", "Apache 2.0", "GPL 3.0"],
+      name: "license",
+    },
+    {
+      type: "list",
+      message: "Chose the badge matching to your license",
+      choices: [
+        "Lisence-MIT-blue",
+        "Lisence-Apache2.0-red",
+        "Lisence-GBL3.0-yellow",
+      ],
+      name: "badge",
     },
     {
       type: "input",
@@ -42,7 +51,7 @@ inquirer
     },
     {
       type: "input",
-      message: "What is the link to your GitHub username?",
+      message: "What is your GitHub username?",
       name: "link",
     },
     {
@@ -55,8 +64,9 @@ inquirer
   .then((response) => {
     fs.writeFile(
       "./assets/README.md",
-      `${response.lisence}
-      
+      `# License: ${response.license}
+      ![${response.license}](https://img.shields.io/badge/${response.badge})
+
       # Title: ${response.title}
 
   ## Description
@@ -65,7 +75,14 @@ inquirer
   
   ${response.description}
 
+  ## Table of Contents
   
+  - [Installation](#install)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+
+
   ## Installs Instruction
   
   What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
@@ -122,13 +139,14 @@ inquirer
 
   ${response.test}
   
-  ## Questions 
+  ## Questions
 
   IF THERE ARE ANY QUESTIONS, PLEASE CONTACT ME AT:
 
   GitHub: github.com/${response.link}
   Email: ${response.email}
  
-  `,err=> err? console.log(err): console.log("ReadMe Made!"))
+  `,
+      (err) => (err ? console.log(err) : console.log("ReadMe Made!"))
+    );
   });
-

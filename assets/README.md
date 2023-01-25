@@ -1,25 +1,33 @@
-GPL 3.0
-      
-      # <Title: >
+# License: MIT
+      ![MIT](https://img.shields.io/badge/Lisence-MIT-blue)
+
+      # Title: NODE README Practice!
 
   ## Description
   
   Provide a short description explaining the what, why, and how of your project. 
   
-  
+  There are no description at the moment since this is a demo.
 
+  ## Table of Contents
   
+  - [Installation](#install)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+
+
   ## Installs Instruction
   
   What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
   
-  
+  Please revert to github for installs cloning.
   
   ## Usage
   
   Provide instructions and examples for use. Include screenshots as needed.
  
-  
+  Using the Nodejs to create a readme file.
   
   To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
   
@@ -57,19 +65,19 @@ GPL 3.0
   
   If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer. 
  
-  
+  Using the Nodejs to create a readme file.
   
   ## Tests
   
   Go the extra mile and write tests for your application. Then provide examples on how to run them here.
 
+  No test instructions.
   
-  
-  ## Questions 
+  ## Questions
 
   IF THERE ARE ANY QUESTIONS, PLEASE CONTACT ME AT:
 
-  GitHub: github.com/
-  Email: 
+  GitHub: github.com/nguyet33
+  Email: tdnguyet33@gmail.com
  
   
